@@ -1,0 +1,14 @@
+
+body{
+    background-color: rebeccapurple;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    color: blue;
+}
+a:hover{
+    background-color: blue;
+    color: black;
+}

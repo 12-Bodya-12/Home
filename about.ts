@@ -9,13 +9,13 @@ fs.readFile(process.cwd() + '/index.html', 'utf8', (error,data)=>{
              res.writeHead(200,{'Content-Type':'text/html'})
                   res.end(data)
 }); else
-    if (req.url==='/index.html') 
-fs.readFile(process.cwd() + '/index.html', 'utf8', (error,data)=>{
+if (req.url==='/style.css') //Подключение style.css к index.html 
+fs.readFile(process.cwd() + '/style.css', 'utf8', (error,data)=>{
       if (error)  throw  error
-             res.writeHead(200,{'Content-Type':'text/html'})
+             res.writeHead(200,{'Content-Type':'text/css'})
                   res.end(data)
-})
-else
+}); else
+
 if (req.url==='/agu') 
             fs.readFile(process.cwd() + '/Agu/agu.html', 'utf8', (error , data)=>{
                   if (error)  throw  error
@@ -52,4 +52,3 @@ fs.readFile(process.cwd() + '/404.html', 'utf8', (error , data) =>{
 })
 
 }).listen(3000)
-
